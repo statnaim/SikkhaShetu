@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShikkhaSetu - খুঁজে নাও তোমার পছন্দের গৃহশিক্ষক।">
+  <title>ShikkhaSetu | Find Your Perfect Tutor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo"><span>Shikkha</span>Setu<span class="dot">.</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home">হোম</a>
+        <a href="#tutors">টিউটর খুঁজুন</a>
+        <a href="#how">কীভাবে কাজ করে</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#contact" class="nav-contact">যোগাযোগ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">আপনার শিক্ষার বিশ্বস্ত সঙ্গী</span>
+          <h1>সঠিক শিক্ষক খুঁজুন,<br><span>এগিয়ে যান</span> স্বপ্নের পথে।</h1>
+          <p>
+            আপনার এলাকার অভিজ্ঞ ও দক্ষ গৃহশিক্ষক খুঁজে নিন সহজেই।
+            ShikkhaSetu যুক্ত করবে শিক্ষার্থী ও যোগ্য শিক্ষকদের।
+          </p>
+          <div class="hero-actions">
+            <a href="#tutors" class="btn btn-primary">টিউটর খুঁজুন <span>→</span></a>
+            <a href="#how" class="btn btn-outline">কীভাবে কাজ করে?</a>
+          </div>
+          <div class="hero-points">
+            <span>✓ সহজ অনুসন্ধান</span>
+            <span>✓ নিজের এলাকার শিক্ষক</span>
+            <span>✓ সরাসরি যোগাযোগ</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-circle"></div>
+          <div class="hero-card">
+            <div class="book-icon">📚</div>
+            <h3>শিক্ষাই শক্তি</h3>
+            <p>আজকের শেখা, আগামীর সাফল্য।</p>
+            <div class="mini-stats">
+              <div><strong>১</strong><small>শিক্ষার্থী</small></div>
+              <div><strong>১</strong><small>শিক্ষক</small></div>
+              <div><strong>∞</strong><small>সম্ভাবনা</small></div>
+            </div>
+          </div>
+          <div class="floating-icon float-one">✏️</div>
+          <div class="floating-icon float-two">🎓</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section" id="tutors">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">FIND YOUR TUTOR</span>
+          <h2>তোমার পছন্দের শিক্ষক খুঁজে নাও</h2>
+          <p>বিষয় ও এলাকা নির্বাচন করে শিক্ষক খুঁজুন।</p>
+        </div>
+
+        <div class="search-box">
+          <div class="field">
+            <label for="subjectFilter">বিষয়</label>
+            <select id="subjectFilter">
+              <option value="">সকল বিষয়</option>
+              <option>গণিত</option>
+              <option>ইংরেজি</option>
+              <option>পদার্থবিজ্ঞান</option>
+              <option>রসায়ন</option>
+              <option>জীববিজ্ঞান</option>
+              <option>বাংলা</option>
+              <option>আইসিটি</option>
+              <option>পরিসংখ্যান</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="districtFilter">জেলা</label>
+            <select id="districtFilter">
+              <option value="">সকল জেলা</option>
+              <option>খুলনা</option>
+              <option>ঢাকা</option>
+              <option>যশোর</option>
+              <option>সাতক্ষীরা</option>
+              <option>বাগেরহাট</option>
+              <option>কুষ্টিয়া</option>
+              <option>রাজশাহী</option>
+              <option>চট্টগ্রাম</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="keywordFilter">এলাকা / কীওয়ার্ড</label>
+            <input type="text" id="keywordFilter" placeholder="যেমন: সোনাডাঙ্গা">
+          </div>
+
+          <button class="btn btn-primary search-btn" id="searchBtn">শিক্ষক খুঁজুন →</button>
+        </div>
+
+        <div class="results-heading">
+          <div>
+            <h3>জনপ্রিয় টিউটর</h3>
+            <p id="resultCount">শিক্ষকদের তালিকা লোড হচ্ছে...</p>
+          </div>
+          <button class="clear-btn" id="clearBtn">ফিল্টার মুছুন</button>
+        </div>
+
+        <div id="tutorGrid" class="tutor-grid">
+          <div class="loading">শিক্ষকদের তথ্য লোড হচ্ছে...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">SIMPLE PROCESS</span>
+          <h2>মাত্র তিনটি ধাপে শিক্ষক খুঁজুন</h2>
+          <p>সহজ, দ্রুত এবং ঝামেলামুক্ত প্রক্রিয়া।</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-icon">🔎</div>
+            <span class="step-number">01</span>
+            <h3>শিক্ষক খুঁজুন</h3>
+            <p>আপনার পছন্দের বিষয় ও জেলা নির্বাচন করুন।</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">👨‍🏫</div>
+            <span class="step-number">02</span>
+            <h3>প্রোফাইল দেখুন</h3>
+            <p>শিক্ষকের যোগ্যতা, অভিজ্ঞতা ও বেতন দেখুন।</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">📞</div>
+            <span class="step-number">03</span>
+            <h3>যোগাযোগ করুন</h3>
+            <p>পছন্দের শিক্ষককে সরাসরি যোগাযোগ করুন।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="join-section" id="about">
+      <div class="container join-box">
+        <div>
+          <span class="eyebrow">JOIN SHIKKHASETU</span>
+          <h2>আপনি কি একজন শিক্ষক?</h2>
+          <p>আপনার শিক্ষাগত যোগ্যতা ও অভিজ্ঞতা দিয়ে শিক্ষার্থীদের কাছে পৌঁছে যান।</p>
+        </div>
+        <a href="#contact" class="btn btn-white">শিক্ষক হিসেবে যুক্ত হোন →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="logo footer-logo"><span>Shikkha</span>Setu<span class="dot">.</span></a>
+        <p>শিক্ষার্থী ও শিক্ষকের মধ্যে একটি সহজ ও বিশ্বস্ত সংযোগ তৈরি করাই আমাদের লক্ষ্য।</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#home">হোম</a>
+        <a href="#tutors">টিউটর খুঁজুন</a>
+        <a href="#how">কীভাবে কাজ করে</a>
+      </div>
+      <div>
+        <h3>যোগাযোগ</h3>
+        <p>ইমেইল: তোমার ইমেইল এখানে বসাও</p>
+        <p>বাংলাদেশ</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> ShikkhaSetu. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
